@@ -24,11 +24,24 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from setuptools import setup
-from isbnlib_dnb_sru import __version__
+from pathlib import Path
+import re
+
+
+ROOT = Path(__file__).parent
+
+def read_version():
+    init_file = ROOT / "isbnlib_dnb_sru" / "__init__.py"
+    text = init_file.read_text(encoding="utf-8")
+    match = re.search(r'^__version__\s*=\s*[\'"]([^\'"]+)[\'"]', text, re.MULTILINE)
+    if not match:
+        raise RuntimeError("Unable to find __version__ in isbnlib_dnb_sru/__init__.py")
+    return match.group(1)
+
 
 setup(
     name='isbnlib-dnb-sru',
-    version=__version__,
+    version=read_version(),
     author='Heiner Walter',
     author_email='',
     url='https://github.com/heinerwalter/isbnlib-dnb-sru',

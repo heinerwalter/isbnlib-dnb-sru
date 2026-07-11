@@ -27,7 +27,12 @@ adventure in open-source.
 8. **Check if all requirements are fulfilled**!
 9. **Push** your local changes to GitHub and make there a **pull request**
    ([help](https://help.github.com/articles/using-pull-requests/))
-   **using `dev` as base branch** (by the way, we follow the *fork & pull* model with this small change).
+   **using `master` as base branch** (by the way, we follow the *fork & pull* model with this small change).
+
+
+## Build Distribution
+
+Build a distribution package using the command `python3 -m build`.
 
 
 ## Style

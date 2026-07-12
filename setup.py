@@ -50,7 +50,7 @@ setup(
     entry_points={'isbnlib.metadata': ['dnb-sru=isbnlib_dnb_sru:query']},
     install_requires=["isbnlib>=3.10.9,<3.11.0"],
     license='LGPL v3',
-    description='A plugin for isbnlib that pulls metadata from Deutsche Nationalbibliothek (DNB; German national library) using the SRU protocol.',
+    description='A plugin for isbnlib that pulls metadata from the Deutsche Nationalbibliothek (DNB; German national library) using the SRU protocol.',
     long_description=open('README.rst').read(),
     keywords='ISBN isbnlib dnb german bibliographic-references',
     classifiers=[

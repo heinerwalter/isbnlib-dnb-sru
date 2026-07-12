@@ -45,7 +45,7 @@ setup(
     author='Heiner Walter',
     author_email='',
     url='https://github.com/heinerwalter/isbnlib-dnb-sru',
-    download_url='https://github.com/heinerwalter/isbnlib-dnb-sru/archive/v1.0.0.zip',
+    download_url='https://github.com/heinerwalter/isbnlib-dnb-sru/archive/v1.0.1.zip',
     packages=['isbnlib_dnb_sru/'],
     entry_points={'isbnlib.metadata': ['dnb-sru=isbnlib_dnb_sru:query']},
     install_requires=["isbnlib>=3.10.9,<3.11.0"],

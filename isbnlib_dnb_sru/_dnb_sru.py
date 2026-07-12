@@ -86,6 +86,12 @@ def parser_sru(xml):
             if metadata['Pages'] else ''
         metadata['Edition'] = metadata['Edition'].split(':')[0].strip(' ') \
             if metadata['Edition'] and ':' in metadata['Edition'] else ''
+
+        if metadata['ISBN-13']:
+            metadata['ImageURL'] = 'https://portal.dnb.de/opac/mvb/cover?isbn=' + metadata['ISBN-13']
+        elif metadata['ISBN-10']:
+            metadata['ImageURL'] = 'https://portal.dnb.de/opac/mvb/cover?isbn=' + metadata['ISBN-10']
+
         return metadata
     except Exception as exc:  # pragma: no cover
         LOGGER.debug('Check the parsing for services.dnb.de/sru/dnb (%r)', exc, exc_info=True)
@@ -117,5 +123,5 @@ def query(isbn):
 
 
 # for debugging:
-#if __name__ == '__main__':
-#    query('9783608126051')
+if __name__ == '__main__':
+    query('9783608126051')

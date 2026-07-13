@@ -23,7 +23,9 @@ adventure in open-source.
 6. Write tests for your code using `pytest` and put then in the directory `isbnlib_dnb_sru/test`
 7. Pass **all tests** and with **coverage > 90%**.
    Check the coverage locally with the command (linux and macos)
-   `t`.
+   `pytest -q --cov=isbnlib_dnb_sru --cov-fail-under=90 isbnlib_dnb_sru/test/test*.py`.
+   
+   Or with `python3 -m pytest -q --cov=isbnlib_dnb_sru --cov-fail-under=90 isbnlib_dnb_sru/test/test*.py` if pytest is not avaialable in the terminal.
 8. **Check if all requirements are fulfilled**!
 9. **Push** your local changes to GitHub and make there a **pull request**
    ([help](https://help.github.com/articles/using-pull-requests/))

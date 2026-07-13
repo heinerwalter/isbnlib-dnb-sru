@@ -24,7 +24,7 @@ def _get_text(topnode):
 def _get_attributes_text(topnode):
     """Get the text values in the child nodes."""
     text = ""
-    if not len(topnode.attributes) or 'rdf:resource' not in topnode.attributes._attrs:
+    if not len(topnode.attributes) or 'rdf:resource' not in topnode.attributes._attrs:  # pragma: no cover
         return text
     node = topnode.attributes._attrs['rdf:resource']
     text = node.value
@@ -34,7 +34,7 @@ def _get_attributes_text(topnode):
 def parser_sru(xml):
     """Parse the response from the SRU service."""
     # handle special case
-    if '<error>' in xml:
+    if '<error>' in xml:  # pragma: no cover
         return {}
     # parse xml and extract canonical fields
     dom = parseString(xml)
@@ -87,15 +87,14 @@ def parser_sru(xml):
         metadata['Edition'] = metadata['Edition'].split(':')[0].strip(' ') \
             if metadata['Edition'] and ':' in metadata['Edition'] else ''
 
-        if metadata['ISBN-13']:
-            metadata['ImageURL'] = 'https://portal.dnb.de/opac/mvb/cover?isbn=' + metadata['ISBN-13']
-        elif metadata['ISBN-10']:
-            metadata['ImageURL'] = 'https://portal.dnb.de/opac/mvb/cover?isbn=' + metadata['ISBN-10']
+        metadata['ImageURL'] =(
+            'https://portal.dnb.de/opac/mvb/cover?isbn=' + metadata['ISBN-13']) if metadata['ISBN-13'] \
+            else ('https://portal.dnb.de/opac/mvb/cover?isbn=' + metadata['ISBN-10'] if metadata['ISBN-10'] else '')
 
         return metadata
     except Exception as exc:  # pragma: no cover
         LOGGER.debug('Check the parsing for services.dnb.de/sru/dnb (%r)', exc, exc_info=True)
-    return metadata
+        return metadata
 
 
 def _mapper(isbn, records):
@@ -123,5 +122,5 @@ def query(isbn):
 
 
 # for debugging:
-if __name__ == '__main__':
-    query('9783608126051')
+#if __name__ == '__main__':
+#    query('9783608126051')

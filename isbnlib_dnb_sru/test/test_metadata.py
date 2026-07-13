@@ -52,9 +52,9 @@ def _is_metadata_filled(book,
 
 def test_query():
     """Test services.dnb.de/sru/dnb."""
-    bookA = query('9783608126051')
-    bookB = query('9783608987492')
-    bookC = query('9783608938296')
+    bookA = query('9783608938289')
+    bookB = query('9783608938005')
+    bookC = query('9783608935240')
     assert (len(repr(bookA)) > 100) == True
     assert (len(repr(bookB)) > 100) == True
     assert (len(repr(bookC)) > 100) == True

@@ -3,3 +3,4 @@ v1.0.1, 2026-07-12 -- Added cover ImageURL to book metadata.
 v1.0.2, 2026-09-12 -- Removed unused import
 v1.0.3, 2026-09-12 -- Changed requirement from isbnlib to isbnlib2 because isbnlib seems not to be maintained anymore
 v1.0.4, 2026-09-12 -- Changed requirement from isbnlib to isbnlib2 in setup.py and fixed readme contenttype
+v1.0.5, 2026-09-12 -- Fixed unit tests and supported Python versions

@@ -1,3 +1,4 @@
 v1.0.0, 2026-07-11 -- Initial release (based on isbnlib-porbase v1.0.3).
 v1.0.1, 2026-07-12 -- Added cover ImageURL to book metadata.
-v1.0.2, 2026-09-12 -- Added cover ImageURL to book metadata.
+v1.0.2, 2026-09-12 -- Removed unused import
+v1.0.3, 2026-09-12 -- Changed requirement from isbnlib to isbnlib2 because isbnlib seems not to be maintained anymore

@@ -26,4 +26,4 @@ For other available isbnlib plugins check [here](https://pypi.python.org/pypi?%3
 
 ## Development
 
-For development install `requirements.txt` and for testing run `pytest` in the root directory.
+For developing and contributing see [CONTRIBUTING.md](CONTRIBUTING.md).

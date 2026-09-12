@@ -20,12 +20,13 @@ adventure in open-source.
    and be OS independent** It is easier if you start to write in python 3 and then
    adapt for python 2) (you will find [Github Actions](https://docs.github.com/en/actions) very handy for
    testing with this requirement!)
-6. Write tests for your code using `pytest` and put then in the directory `isbnlib_dnb_sru/test`
+6. Write tests for your code using `pytest` and put them in the directory `isbnlib_dnb_sru/test`
 7. Pass **all tests** and with **coverage > 90%**.
    Check the coverage locally with the command (linux and macos)
    `pytest -q --cov=isbnlib_dnb_sru --cov-fail-under=90 isbnlib_dnb_sru/test/test*.py`.
    
-   Or with `python3 -m pytest -q --cov=isbnlib_dnb_sru --cov-fail-under=90 isbnlib_dnb_sru/test/test*.py` if pytest is not avaialable in the terminal.
+   Or with `python3 -m pytest -q --cov=isbnlib_dnb_sru --cov-fail-under=90 isbnlib_dnb_sru/test/test*.py`
+   if pytest is not avaialable in the terminal.
 8. **Check if all requirements are fulfilled**!
 9. **Push** your local changes to GitHub and make there a **pull request**
    ([help](https://help.github.com/articles/using-pull-requests/))
@@ -35,6 +36,8 @@ adventure in open-source.
 ## Build Distribution
 
 Build a distribution package using the command `python3 -m build`.
+
+See [PUBLISHING.md](PUBLISHING.md) for an instruction on how to publish the built package to PyPI.
 
 
 ## Style

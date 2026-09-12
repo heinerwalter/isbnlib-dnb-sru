@@ -51,7 +51,10 @@ def _is_metadata_filled(book,
 
 
 def test_query():
-    """Test services.dnb.de/sru/dnb."""
+    """
+    Test services.dnb.de/sru/dnb
+    with valid and available ISBNs.
+    """
     bookA = query('9783608938289')
     bookB = query('9783608938005')
     bookC = query('9783608935240')
@@ -64,11 +67,17 @@ def test_query():
     assert _is_metadata_filled(bookC)
 
 def test_query_missing():
-    """Test services.dnb.de/sru/dnb (missing data)."""
+    """
+    Test services.dnb.de/sru/dnb
+    with valid but unavailable ISBNs.
+    """
     assert (len(repr(query('9781849692341'))) <= 2) == True
     assert (len(repr(query('9781849692343'))) <= 2) == True
 
 
 def test_query_wrong():
-    """Test services.dnb.de/sru/dnb (wrong data)."""
+    """
+    Test services.dnb.de/sru/dnb
+    with invalid ISBNs.
+    """
     assert (len(repr(query('9780000000'))) <= 2) == True

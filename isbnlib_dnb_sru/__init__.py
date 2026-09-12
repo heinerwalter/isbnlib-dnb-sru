@@ -3,7 +3,7 @@
 # pylint: skip-file
 from ._dnb_sru import query
 
-__version__ = '1.0.3'
+__version__ = '1.0.4'
 
 __plugin_author__ = 'Heiner Walter'
 __plugin_description__ = 'Metadata for German books from Deutsche Nationalbibliothek (DNB)'

@@ -48,7 +48,9 @@ setup(
     download_url='https://github.com/heinerwalter/isbnlib-dnb-sru/archive/v1.0.3.zip',
     packages=['isbnlib_dnb_sru/'],
     entry_points={'isbnlib.metadata': ['dnb-sru=isbnlib_dnb_sru:query']},
-    install_requires=["isbnlib>=3.10.9,<3.11.0"],
+    install_requires=[
+        "isbnlib>=3.11",  # formerly "isbnlib>=3.10.9,<3.11.0"
+    ],
     license='LGPL v3',
     description='A plugin for isbnlib that pulls metadata from the Deutsche Nationalbibliothek (DNB; German national library) using the SRU protocol.',
     long_description=open('README.md').read(),

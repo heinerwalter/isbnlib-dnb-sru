@@ -49,7 +49,7 @@ setup(
     packages=['isbnlib_dnb_sru/'],
     entry_points={'isbnlib.metadata': ['dnb-sru=isbnlib_dnb_sru:query']},
     install_requires=[
-        "isbnlib>=3.11",  # formerly "isbnlib>=3.10.9,<3.11.0"
+        "isbnlib2>=3.11",  # formerly "isbnlib>=3.10.9,<3.11.0"
     ],
     license='LGPL v3',
     description='A plugin for isbnlib that pulls metadata from the Deutsche Nationalbibliothek (DNB; German national library) using the SRU protocol.',
@@ -58,14 +58,14 @@ setup(
     keywords='ISBN isbnlib dnb german bibliographic-references',
     classifiers=[
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
+        'Programming Language :: Python :: 3.14',
         'License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)',
         'Operating System :: OS Independent',
         'Development Status :: 5 - Production/Stable',

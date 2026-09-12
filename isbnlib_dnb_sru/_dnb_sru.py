@@ -66,13 +66,13 @@ def parser_sru(xml):
                 txt = '|'.join([_get_attributes_text(node) for node in nodes])
             else:
                 txt = '|'.join([_get_text(node) for node in nodes])
-            metadata[key] = u(txt)
+            metadata[key] = txt
         # cleaning
         metadata['Publisher'] = metadata['Publisher'].split('|')[0] \
             if metadata['Publisher'] else ''
         authors = metadata['Authors'].split('|') if metadata['Authors'] else []
         metadata['Authors'] = [author.strip('0123456789,- ') for author in authors]
-        metadata['Year'] = u(''.join(c for c in metadata['Year'] if c.isdigit())[:4])\
+        metadata['Year'] = ''.join(c for c in metadata['Year'] if c.isdigit())[:4]\
             if metadata['Year'] else ''
         metadata['Title'] = metadata['Title'].replace(' :', ':').replace('<', '').replace('>', '') \
             if metadata['Title'] else ''
@@ -105,8 +105,8 @@ def _mapper(isbn, records):
     if not records:  # pragma: no cover
         return {}
     # add ISBN-13
-    records['ISBN-13'] = u(isbn)
-    # call stdmeta for extra cleanning and validation
+    records['ISBN-13'] = str(isbn)
+    # call stdmeta for extra cleaning and validation
     return stdmeta(records)
 
 

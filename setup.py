@@ -52,6 +52,7 @@ setup(
     license='LGPL v3',
     description='A plugin for isbnlib that pulls metadata from the Deutsche Nationalbibliothek (DNB; German national library) using the SRU protocol.',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     keywords='ISBN isbnlib dnb german bibliographic-references',
     classifiers=[
         'Programming Language :: Python',

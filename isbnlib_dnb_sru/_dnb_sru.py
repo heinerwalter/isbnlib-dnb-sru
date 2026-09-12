@@ -5,8 +5,7 @@ import logging
 from xml.dom.minidom import parseString
 
 from isbnlib.dev import stdmeta
-from isbnlib.dev._bouth23 import u
-from isbnlib.dev.webquery import query as wquery
+from isbnlib.dev.webquery import query as webquery
 
 LOGGER = logging.getLogger(__name__)
 UA = 'isbnlib (gzip)'
@@ -113,7 +112,7 @@ def _mapper(isbn, records):
 
 def query(isbn):
     """Query the SRU service for metadata."""
-    data = wquery(
+    data = webquery(
         SERVICE_URL.format(isbn=isbn), user_agent=UA, parser=parser_sru)
     if not data:  # pragma: no cover
         LOGGER.debug('No data from services.dnb.de/sru/dnb for isbn %s', isbn)
